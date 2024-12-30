@@ -407,7 +407,7 @@ function downloadFile(filename) {
 
     console.log("FileName to Download: ", filenameToDownload);
     // Construct the API URL for the file
-    const apiUrl = `http://127.0.0.1:5000/download/disk/${filenameToDownload}`;
+    const apiUrl = `https://video-storage-management-service-901574415199.us-central1.run.app/download/disk/${filenameToDownload}`;
 
     // Send a GET request to the API
     fetch(apiUrl, {
@@ -450,8 +450,9 @@ function streamFile(filename) {
     console.log("File Name to Stream", filenameToStream);
 
     // Construct the API URL for fetching the signed URL
-    const apiUrl = `http://127.0.0.1:5000/stream/direct/${filenameToStream}`;
+    const apiUrl = `https://video-storage-management-service-901574415199.us-central1.run.app/stream/direct/${filenameToStream}`;
 
+    
     // Hide the delete file modal
     deleteFileModal.style.display = "none";
 
